@@ -5,6 +5,11 @@ import Image from "next/image"
 import Link from "next/link"
 
 
+interface SearchParamProps {
+  params: Promise<{ id: string; type: TransformationTypeKey }>;
+  searchParams: any;
+
+}
 
 const Home = async ({ searchParams }: SearchParamProps) => {
   const page = Number(searchParams?.page) || 1;
